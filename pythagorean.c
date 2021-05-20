@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <cs50.h>
 int main (void)
 {
@@ -7,21 +8,21 @@ int main (void)
   c=get_float("side 3 ");
   if (a>b&&a>c)
   {
-    if((aa)==((bb)+(cc)))
+    if((a*a)==((b*b)+(c*c)))
       printf ("Yes");
     else
-      printf ("No");
+      printf ("No");  
   }
   else if (b>a&&b>c)
   {
-    if((bb)==((cc)+(aa)))
+    if((b*b)==((c*c)+(a*a)))
       printf ("Yes");
     else
-      printf ("No");
+      printf ("No");  
   }
   else
   {
-    if((cc)==((aa)+(b*b)))
+    if((c*c)==((a*a)+(b*b)))
       printf ("Yes");
     else
       printf ("No");
