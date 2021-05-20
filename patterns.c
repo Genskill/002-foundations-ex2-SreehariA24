@@ -1,35 +1,33 @@
-#include <stdio.h>
+#include<stdio.h>
 #include <cs50.h>
-int main (void)
-{
-  int ch;
-  ch=get_int("Enter type of pattern (1 or 2) ");
-  int row;
-  int space;
-  if (ch==1)
-  {
-    row=get_int("Number of rows");
-    for (int i=row;i>=1;i--)
-    {
-      for (int j=1;j<=i;j++)
-        printf ("#");
-      printf ("\n");
-    }
-  }
-  else if (ch==2)
-  {
-    row=get_int("Number of rows");
-    space=1;
-    for (int i=row;i>=1;i--)
-    {
-      for (int j=1;j<=i-1;j++)
-        printf (" ");
-      for (int k=1;k<=space;k++)
-        printf ("#");
-      printf ("\n");
-      space++;  
-     }
-   }             
-    else         
-    printf("Inavalid choice");
+void main(){
+	int option,rows,i,j,k;
+	option=get_int("");
+	rows=get_int("");
+	if(option==1){
+
+
+		for(i=0;i<rows;i++){
+			for(j=rows-i;j>0;j--){
+
+				printf("#");
+				}
+			printf("\n");
+			}
+
+	}
+	else if(option==2){
+		for(i=0;i<rows;i++){
+			for(j=rows-(i+1),k=0;j>0;k++,j--){
+
+				printf(" ");
+				}
+			for(j=k;j<rows;j++){
+			printf("#");
+			}
+printf("\n");
+
+	}
 }
+}
+//gcc -o out patterns.c cs50.c 
